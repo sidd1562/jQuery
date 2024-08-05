@@ -1,0 +1,34 @@
+$(selector).method();                           //33to36
+    v
+ Css Selector    
+
+ * Ancestors Methods 
+ * Descendants Methods
+ * Siblings Methods
+ * Filtering Methods
+
+    
+ * Ancestors Methods 
+
+-> Traversing Up the DOM Tree
+  
+     DoM Tree
+
+       <div>                  //Great-Grandparent
+  - - - - | - - - - - - 
+  v    v    v    v     v          ^   
+ <h1> <ul> <p> <img>  <a>    //Grandparent
+        |                         ^
+   <li>    <li>              // Parent 
+     |       |
+    <a>    <span>    
+
+
+
+    * Ancestors Methods  
+
+     1. Parent()
+     2. parents()
+     3. parentsUntil()
+     4.closest()
+     5.offsetparent()

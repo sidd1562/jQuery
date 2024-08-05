@@ -1,0 +1,10 @@
+* event.pageX
+* event.pageY
+* event.type
+* event.which
+* event.target
+* event.preventDefault()
+* event.isDefaultPrevented()
+* event.stoppropagation()
+* event.isPropagationStopped()
+* event.data

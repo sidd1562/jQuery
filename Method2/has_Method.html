@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #first {
+        background-color: rgb(124, 81, 164);
+        margin: 2px;
+        padding: 7px;
+        border: 3px solid #000;
+        border-radius: 7px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jquery-3 Filtering Methods</h1>
+
+    <div id="first">
+      <p>
+        he filter() method <b>returns</b> elements that match a certain
+        criteria.
+      </p>
+      <p class="test">
+        This method lets you specify a criteria. Elements that do not match the
+        criteria are removed from the selection, and those that match will be
+        returned.
+      </p>
+    </div>
+
+    <ul>
+      <li>Orange</li>
+      <li><span>Apple</span></li>
+      <li>Banana</li>
+      <li>Grapes</li>
+    </ul>
+
+    <p class="test">
+      he filter() method returns elements that match a certain criteria.
+    </p>
+    <p>
+      This
+      <span class="test">method lets you specify a criteria.</span> Elements
+      that do not match the criteria are removed from the selection, and those
+      that match will be returned.
+    </p>
+
+    <script src="../JQuery/jquery-3.7.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        //  $('p').has('span').css("background","gold")
+        //  $('li').has('span').css("background","gold")
+        // $("p").has("span, b").css("background", "gold");
+        // $("p").has(".test").css("background", "gold");
+
+        $("p").click(function (e) {
+          e.preventDefault();
+          if ($(this).parent().is("div")) {
+            alert($(this).parent().is("div"));
+            $(this).css("background", "gold");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

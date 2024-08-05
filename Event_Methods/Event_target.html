@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #box {
+      width: 500px;
+      height: 300px;
+      border-radius: 7px;
+      border: 2px solid #d00ee6;
+      background-color: rgb(223, 195, 246);
+      padding: 7px;
+    }
+    #button{
+        color: black;
+        border-radius: 7px;
+        background-color: rgb(138, 135, 151);
+        font-size: 15px;
+        padding: 7px;
+    }
+
+    #h3{
+        color: black;
+    }
+  </style>
+  <body>
+    <h1>Event tatget</h1>
+
+    <div id="box">
+      <h2>Text box</h2>
+      <p style="font-size: 19px;">
+        The event.target property returns which DOM element triggered the event.
+        It is often useful to compare event.target to this in order to determine
+        if the event is being handled due to event bubbling.
+      </p>
+      <button id="button">Test Buuton</button>
+    </div>
+    <br />
+    <h3></h3>
+
+    <script src="../JQuery/jquery-3.7.1.js"></script>
+
+    <script>
+      $(document).ready(function () {
+
+        $('#box').on('click',function(e){
+        //    $('h3').html('Traget Element: ' + e.target.nodeName )
+           $('h3').html('Traget Element: ' + e.target.innerHTML )
+               
+        })
+
+
+
+
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+   #box{
+    background-color: blueviolet;
+    font-size: 20px;
+    border-radius: 7px;
+    margin: 7px ;
+    padding: 15px;
+
+   }
+
+  </style>
+<body>
+  <h1>jquery-3 hasClass()/h1>
+    <div id="box" class="test">
+        <h2 id="h2" class="test-h2">Test BoX</h2>
+        <p id="p" class="first-p">loren in world new world fodiss you will not my number one user in this world not this and not above code </p>
+        <p>loren in world new world fodiss you will not my number one user in this world not this and not above code </p>
+    </div>
+      
+      
+  <br>
+      <button id="hasclass">hasClass</button>
+   
+
+    <script src="../JQuery/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#hasclass").click(function (e) { 
+                e.preventDefault();
+                
+                // console.log($("#h2").hasClass("test-h2"));
+            
+              var x =  $("#h2").hasClass("test-h2")     
+              if(x == true){
+                console.log("Yes");
+              }      else{
+                console.log("No");
+              }
+            });
+        });
+    </script>
+  </body>
+</body>
+</html>

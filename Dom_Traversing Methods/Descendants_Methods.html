@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #main-outer {
+        width: 450px;
+        height: 300px;
+        padding: 7px;
+        border: 2px solid #000;
+        background-color: rgb(159, 139, 178);
+        justify-content: center;
+        align-items: center;
+      }
+
+      #outer {
+        width: 90%;
+        height: 70%;
+        margin-left: 15px;
+        position: relative;
+        border: 2px solid #000;
+        background-color: aquamarine;
+      }
+      #inner {
+        align-items: center;
+        margin: 20px;
+        height: 50%;
+        border: 2px solid #000;
+        background-color: rgb(48, 85, 122);
+        display: flex;
+      }
+      #inner div {
+        width: 50px;
+        height: 60px;
+        margin: 7px;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #000;
+        background-color: rgb(109, 127, 146);
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-outer">
+      <h2>Main Outer</h2>
+      <div id="outer">
+        <h2>Outer</h2>
+        <div id="inner">
+          <h2 id="child-head">Inner</h2>
+          <div>A</div>
+          <div>B</div>
+          <div id="child-C">C</div>
+          <div>D</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../JQuery/jquery-3.7.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        // $("#inner").children("#child-C").css("background", "green");
+        $("#main-outer").find("#child-C").css("background", "green");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #result {
+      width: 500px;
+      height: 300px;
+      border: 2px solid #d00ee6;
+      background-color: rgb(223, 195, 246);
+    }
+
+    #box {
+      width: 20px;
+      height: 20px;
+      border-radius: 25px;
+      background-color: #32383a;
+    }
+  </style>
+  <body>
+    <h1>pageX & pageY</h1>
+
+    <div id="result"></div>
+
+    <div id="box"></div>
+    <script src="../JQuery/jquery-3.7.1.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(document).mousemove(function (e) {
+          $("#result").text("X : " + e.pageX + "   Y : " + e.pageY);
+          //   $("#result").text("X : " + e.clientX + "   Y : " + e.clientY);
+
+          var x = e.pageX -10;
+          var y = e.pageY -9;
+
+          $("#box").offset({ top: y, left: x });
+        });
+      });
+    </script>
+  </body>
+</html>
